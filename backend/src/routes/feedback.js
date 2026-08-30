@@ -1,0 +1,1 @@
+import {Router} from 'express';import {auth} from '../middleware/auth.js';import {createFeedback} from '../controllers/feedbackController.js';const r=Router();r.use(auth);r.post('/',createFeedback);export default r;

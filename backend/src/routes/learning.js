@@ -1,0 +1,1 @@
+import {Router} from 'express';import {auth} from '../middleware/auth.js';import {analyzeGoal,generateRoadmap,getPath,updateProgress} from '../controllers/learningController.js';const r=Router();r.use(auth);r.post('/analyze-goal',analyzeGoal);r.post('/generate-roadmap',generateRoadmap);r.get('/',getPath);r.put('/progress',updateProgress);export default r;

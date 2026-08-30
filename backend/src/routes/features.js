@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import { auth } from '../middleware/auth.js';
+import { assessment, submitAssessment, generateProject, review, interview } from '../controllers/featureController.js';
+const r = Router();
+r.use(auth);
+r.get('/assessment', assessment);
+r.post('/assessment/submit', submitAssessment);
+r.post('/project', generateProject);
+r.get('/review', review);
+r.get('/interview', interview);
+export default r;
